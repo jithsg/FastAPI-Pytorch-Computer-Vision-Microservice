@@ -5,56 +5,44 @@ FastAPI Application Overview
 This application serves a pre-trained DenseNet121 model using FastAPI to classify images based on the ImageNet dataset.
 
 Requirements
-Python 3.7+
-FastAPI
-Uvicorn
-Torchvision
-Pillow
+  Python 3.7+
+  FastAPI
+  Uvicorn
+  Torchvision
+  Pillow
+  
 Setup & Installation
-Clone the repository:
-
-bash
-Copy code
-git clone <repository-url>
-Navigate to the repository directory:
-
-bash
-Copy code
-cd <repository-directory>
+  Clone the repository:
+    git clone <repository-url>
+    cd <repository-directory>
+    
 Install the required packages:
-
-bash
-Copy code
-pip install fastapi[all] uvicorn torchvision pillow
+  pip install fastapi[all] uvicorn torchvision pillow
 Download the imagenet_class_index.json and place it in the root directory of the application. This file contains the mapping of class indices to their respective labels.
 
-Usage
 Run the FastAPI application:
-
-bash
-Copy code
-uvicorn <filename>:app --host 0.0.0.0 --port 8080
-Replace <filename> with the name of your script, if different.
+  uvicorn <filename>:app --host 0.0.0.0 --port 8080
+  Replace <filename> with the name of your script, if different.
 
 Open a web browser and navigate to http://0.0.0.0:8080/. You should see a message: "Hello World".
 
 To classify an image, make a POST request to http://0.0.0.0:8080/predict with your image file. The response will contain the class ID and the class name.
 
 Endpoints
-GET /: Returns a welcome message.
-POST /predict: Accepts an image file and returns the predicted class ID and class name.
-GitHub Actions and AWS Deployment
-This repository uses GitHub Actions for continuous integration and deployment to AWS.
+  GET /: Returns a welcome message.
+  POST /predict: Accepts an image file and returns the predicted class ID and class name.
+  GitHub Actions and AWS Deployment
+  This repository uses GitHub Actions for continuous integration and deployment to AWS.
 
 Prerequisites
-A GitHub repository with your Python application.
-AWS account with access and secret keys.
-Properly set up make commands in a Makefile for installing dependencies, formatting code, linting, and deployment.
-Setting Up
-GitHub Secrets: Store your AWS credentials securely in GitHub Secrets. Navigate to your repository > Settings > Secrets and add the following secrets:
-
-AWS_ACCESS_KEY_ID
-AWS_SECRET_ACCESS_KEY
+  A GitHub repository with your Python application.
+  AWS account with access and secret keys.
+  Properly set up make commands in a Makefile for installing dependencies, formatting code, linting, and deployment.
+  Setting Up
+  GitHub Secrets: Store your AWS credentials securely in GitHub Secrets. Navigate to your repository > Settings > Secrets and add the following secrets:
+  
+  AWS_ACCESS_KEY_ID
+  AWS_SECRET_ACCESS_KEY
 Makefile: Ensure that your project has a Makefile with the following commands:
 
 install: For installing all the project's dependencies.
