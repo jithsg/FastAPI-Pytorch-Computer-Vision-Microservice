@@ -21,13 +21,11 @@ jobs:
       - name: Install dependencies
         run: make install
 
-      # Commented out the steps since they are prefixed with '#' which is a comment
-      # If you intend to run these in the future, you can remove the '#' prefix
       - name: Format code
         run: make format
 
       - name: Lint code
         run: make lint
 
-      -name: Container lint
+      - name: Container lint
         run: make container-lint
