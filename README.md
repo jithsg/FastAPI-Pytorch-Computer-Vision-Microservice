@@ -12,16 +12,16 @@ This application serves a pre-trained DenseNet121 model using FastAPI to classif
   Torchvision
   Pillow
   
-Setup & Installation
+# Setup & Installation
   Clone the repository:
     git clone <repository-url>
     cd <repository-directory>
     
-Install the required packages:
+# Install the required packages:
   pip install fastapi[all] uvicorn torchvision pillow
 Download the imagenet_class_index.json and place it in the root directory of the application. This file contains the mapping of class indices to their respective labels.
 
-Run the FastAPI application:
+# Run the FastAPI application:
   uvicorn <filename>:app --host 0.0.0.0 --port 8080
   Replace <filename> with the name of your script, if different.
 
@@ -29,13 +29,13 @@ Open a web browser and navigate to http://0.0.0.0:8080/. You should see a messag
 
 To classify an image, make a POST request to http://0.0.0.0:8080/predict with your image file. The response will contain the class ID and the class name.
 
-Endpoints
+# Endpoints
   GET /: Returns a welcome message.
   POST /predict: Accepts an image file and returns the predicted class ID and class name.
   GitHub Actions and AWS Deployment
   This repository uses GitHub Actions for continuous integration and deployment to AWS.
 
-Prerequisites
+# Prerequisites
   A GitHub repository with your Python application.
   AWS account with access and secret keys.
   Properly set up make commands in a Makefile for installing dependencies, formatting code, linting, and deployment.
