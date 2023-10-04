@@ -1,6 +1,6 @@
 # pytorch-app
 [![Python Application Test with Github Actions](https://github.com/jithsg/FastAPI-Pytorch-Microservice/actions/workflows/main.yml/badge.svg)](https://github.com/jithsg/FastAPI-Pytorch-Microservice/actions/workflows/main.yml)
-FastAPI Image Classification with DenseNet121 and GitHub Actions Deployment
+# FastAPI Image Classification with DenseNet121 and GitHub Actions Deployment
 FastAPI Application Overview
 This application serves a pre-trained DenseNet121 model using FastAPI to classify images based on the ImageNet dataset.
 
