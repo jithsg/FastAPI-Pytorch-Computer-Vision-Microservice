@@ -3,7 +3,6 @@ import json
 from torchvision import models
 import torchvision.transforms as transforms
 from PIL import Image
-import fastapi
 from fastapi import FastAPI, UploadFile, HTTPException
 import uvicorn
 
@@ -27,7 +26,7 @@ def transform_image(image_bytes):
         image = Image.open(io.BytesIO(image_bytes))
         return my_transforms(image).unsqueeze(0)
     except Exception as e:
-        raise HTTPException(status_code=400, detail="Invalid image")
+        raise HTTPException(status_code=400, detail="Invalid image") from e
 
 
 def get_prediction(image_bytes):

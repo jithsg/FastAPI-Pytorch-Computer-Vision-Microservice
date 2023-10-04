@@ -2,19 +2,19 @@ install:
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt
 
-test:
-	#python -m pytest -vv --cov=main --cov=mylib test_*.py
-
 format:	
 	black *.py 
 
 lint:
-	#pylint --disable=R,C --ignore-patterns=test_.*?py *.py mylib/*.py
+	pylint --disable=R,C,W1203,W1202 *.py
 
 container-lint:
 	docker run --rm -i hadolint/hadolint < Dockerfile
 
-refactor: format lint
+build:
+	docker build -t pytorch-app:latest .
+run:
+	docker run -d --name pytorch-app -p 8080:8080 pytorch-app:latest
 
 deploy:
 	#deploy goes here
