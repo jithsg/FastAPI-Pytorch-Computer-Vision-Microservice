@@ -1,4 +1,4 @@
-# pytorch-app
+# Pytorch  Compter Vision App Deployed to Amazon App Runner via AWS ECR and Github Repo
 [![Python Application Test with Github Actions](https://github.com/jithsg/FastAPI-Pytorch-Microservice/actions/workflows/main.yml/badge.svg)](https://github.com/jithsg/FastAPI-Pytorch-Microservice/actions/workflows/main.yml)
 # FastAPI Image Classification with DenseNet121 and GitHub Actions Deployment
 FastAPI Application Overview
