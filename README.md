@@ -4,7 +4,7 @@ FastAPI Image Classification with DenseNet121 and GitHub Actions Deployment
 FastAPI Application Overview
 This application serves a pre-trained DenseNet121 model using FastAPI to classify images based on the ImageNet dataset.
 
-#Requirements
+# Requirements
 
   Python 3.7+
   FastAPI
